@@ -15,7 +15,7 @@ RUN apt-get update && \
  
 USER jenkins
 
-RUN echo "envinject\npython\ncredentials\nblueocean" > /tmp/plugins.txt && \
+RUN echo "envinject\npython\ncredentials\nblueocean\nantisamy-markup-formatter" > /tmp/plugins.txt && \
     /usr/local/bin/install-plugins.sh < /tmp/plugins.txt && \
     rm -rf /tmp/plugins.txt
 
